@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: aks-helloworld-one
-  namespace: demo-app  
+  #namespace: demo-app  
 spec:
   replicas: 1
   selector:
@@ -26,7 +26,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: aks-helloworld-one
-  namespace: demo-app
+  #namespace: demo-app
 spec:
   type: ClusterIP
   ports:
@@ -38,7 +38,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: aks-helloworld-two  
-  namespace: demo-app
+  #namespace: demo-app
 spec:
   replicas: 1
   selector:
@@ -62,7 +62,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: aks-helloworld-two  
-  namespace: demo-app
+  #namespace: demo-app
 spec:
   type: ClusterIP
   ports:
@@ -74,7 +74,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: hello-world-ingress
-  namespace: demo-app
+  #namespace: demo-app
   annotations:
     #nginx.ingress.kubernetes.io/ssl-redirect: "false"
     #nginx.ingress.kubernetes.io/use-regex: "true"
